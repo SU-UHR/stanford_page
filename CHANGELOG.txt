@@ -1,2 +1,6 @@
 Stanford Page x.x-x.x xxxx-xx-xx
---------------------------------------
+--------------------------------
+
+Stanford Page 7.x-1.0-alpha5 2013-03-06
+---------------------------------------
+Initial release of Stanford Page

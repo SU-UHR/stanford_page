@@ -96,9 +96,7 @@ function stanford_page_field_default_fields() {
       'indexes' => array(),
       'locked' => '0',
       'module' => 'field_collection',
-      'settings' => array(
-        'path' => '',
-      ),
+      'settings' => array(),
       'translatable' => '0',
       'type' => 'field_collection',
     ),

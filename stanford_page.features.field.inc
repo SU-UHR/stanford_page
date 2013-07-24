@@ -319,10 +319,10 @@ function stanford_page_field_default_fields() {
         'settings' => array(
           'insert' => 1,
           'insert_class' => '',
-          'insert_default' => 'image_large-scaled',
+          'insert_default' => 'image_large-square',
           'insert_styles' => array(
             'auto' => 0,
-            'image' => 0,
+            'image' => 'image',
             'image_12-col-banner' => 0,
             'image_3-col-header' => 0,
             'image_3-col-well-header' => 0,

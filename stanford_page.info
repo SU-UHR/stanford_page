@@ -16,6 +16,7 @@ dependencies[] = link
 dependencies[] = list
 dependencies[] = number
 dependencies[] = options
+dependencies[] = stanford_image
 dependencies[] = stanford_image_styles
 dependencies[] = strongarm
 dependencies[] = taxonomy

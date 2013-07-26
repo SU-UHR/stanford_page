@@ -96,7 +96,9 @@ function stanford_page_field_default_fields() {
       'indexes' => array(),
       'locked' => '0',
       'module' => 'field_collection',
-      'settings' => array(),
+      'settings' => array(
+        'hide_blank_items' => TRUE,
+      ),
       'translatable' => '0',
       'type' => 'field_collection',
     ),

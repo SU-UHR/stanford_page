@@ -321,7 +321,7 @@ function stanford_page_field_default_fields() {
         'settings' => array(
           'insert' => 1,
           'insert_class' => '',
-          'insert_default' => 'image_large-square',
+          'insert_default' => 'image_large-scaled',
           'insert_styles' => array(
             'auto' => 0,
             'image' => 'image',

@@ -98,6 +98,7 @@ function stanford_page_field_default_fields() {
       'module' => 'field_collection',
       'settings' => array(
         'hide_blank_items' => TRUE,
+        'path' => '',
       ),
       'translatable' => '0',
       'type' => 'field_collection',
@@ -211,6 +212,7 @@ function stanford_page_field_default_fields() {
         'module' => 'file',
         'settings' => array(
           'insert' => 1,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'auto',
           'insert_styles' => array(
@@ -320,6 +322,7 @@ function stanford_page_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 1,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'image_large-scaled',
           'insert_styles' => array(
@@ -369,17 +372,10 @@ function stanford_page_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Caption');
-  t('Credits');
-  t('Enter the original name, if changed, and other information to aid in finding the original image.');
-  t('Enter the photographer or organization credits.');
   t('Featured Image');
   t('File');
-  t('Image');
   t('Image insert');
-  t('Optionally enter information to appear as a caption for this image. This text may be trimmed to 180 characters.');
   t('Select a featured image for the page and add an optional caption.');
-  t('Source Info');
   t('Use this to Insert images into the text.');
 
   return $fields;

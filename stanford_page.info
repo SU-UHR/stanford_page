@@ -23,7 +23,6 @@ dependencies[] = views
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
-features[field_base][] = field_s_image_info
 features[field_base][] = field_s_page_file
 features[field_base][] = field_s_page_image_insert
 features[field_group][] = group_s_postcard_content|node|stanford_page|default

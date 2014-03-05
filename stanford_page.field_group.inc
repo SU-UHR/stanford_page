@@ -61,7 +61,7 @@ function stanford_page_field_group_info() {
     'format_settings' => array(
       'label' => 'Postcard Image',
       'instance_settings' => array(
-        'classes' => 'postcard-image',
+        'classes' => 'postcard-image group_s_postcard_image',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',

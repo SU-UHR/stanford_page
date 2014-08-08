@@ -49,4 +49,4 @@ features[variable][] = pathauto_node_stanford_page_pattern
 features[variable][] = save_continue_stanford_page
 features[views_view][] = stanford_page_manage
 features_exclude[field_base][body] = body
-project status url = http://drupalfeatures.stanford.edu/fserver/stanford_page/7.x
+project status url = https://github.com/SU-SWS/stanford_page

@@ -136,7 +136,7 @@ function stanford_page_field_default_field_instances() {
   $field_instances['node-stanford_page-field_s_page_file'] = array(
     'bundle' => 'stanford_page',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload and insert file links into your content',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -166,7 +166,7 @@ function stanford_page_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_s_page_file',
-    'label' => 'File',
+    'label' => 'File Insert',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,

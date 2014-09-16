@@ -136,7 +136,7 @@ function stanford_page_field_default_field_instances() {
   $field_instances['node-stanford_page-field_s_page_file'] = array(
     'bundle' => 'stanford_page',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload and insert file links into your content',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -166,7 +166,7 @@ function stanford_page_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_s_page_file',
-    'label' => 'File',
+    'label' => 'File Insert',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
@@ -182,9 +182,10 @@ function stanford_page_field_default_field_instances() {
         'insert' => 1,
         'insert_absolute' => FALSE,
         'insert_class' => '',
-        'insert_default' => 'auto',
+        'insert_default' => 'icon_link',
         'insert_styles' => array(
-          'auto' => 'auto',
+          'auto' => 0,
+          'icon_link' => 'icon_link',
           'image' => 0,
           'image_3-col-header' => 0,
           'image_3-col-well-header' => 0,
@@ -211,7 +212,7 @@ function stanford_page_field_default_field_instances() {
           'image_thmb-profile' => 0,
           'image_thmb-square' => 0,
           'image_thumbnail' => 0,
-          'link' => 0,
+          'link' => 'link',
         ),
         'insert_width' => '',
         'progress_indicator' => 'throbber',

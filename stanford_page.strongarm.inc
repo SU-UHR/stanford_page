@@ -14,7 +14,7 @@ function stanford_page_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_stanford_page';
-  $strongarm->value = 'edit-menu';
+  $strongarm->value = 'edit-auto-nodetitle';
   $export['additional_settings__active_tab_stanford_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -80,6 +80,9 @@ function stanford_page_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'stanford_view_card' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -87,7 +90,13 @@ function stanford_page_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '10',
+        ),
+        'metatags' => array(
+          'weight' => '12',
+        ),
+        'redirect' => array(
+          'weight' => '11',
         ),
       ),
       'display' => array(),
@@ -100,8 +109,13 @@ function stanford_page_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_stanford_page';
   $strongarm->value = array(
-    0 => 'menu-basic-site-help',
-    1 => 'main-menu',
+    0 => 'main-menu',
+    1 => 'benefits--rwards',
+    2 => 'learn--grow',
+    3 => 'manage--lead',
+    4 => 'welcome-center',
+    5 => 'faculty-staff-help-center',
+    6 => 'test-subsite-two-lines',
   );
   $export['menu_options_stanford_page'] = $strongarm;
 

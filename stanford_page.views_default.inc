@@ -152,48 +152,56 @@ function stanford_page_views_default_views() {
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
     'action::node_assign_owner_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
+    ),
+    'action::node_convert_convert_action' => array(
+      'selected' => 0,
       'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
     ),
     'action::views_bulk_operations_delete_item' => array(
       'selected' => 1,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Delete',
-      'postpone_processing' => 0,
     ),
-    'action::system_message_action' => array(
+    'action::views_bulk_operations_delete_revision' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::views_bulk_operations_script_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_make_sticky_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_make_unsticky_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::views_bulk_operations_modify_action' => array(
       'selected' => 1,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Modify',
@@ -202,9 +210,9 @@ function stanford_page_views_default_views() {
         'display_values' => array(
           'stanford_page::field_s_image_info' => 'stanford_page::field_s_image_info',
           'stanford_page::field_s_page_file' => 'stanford_page::field_s_page_file',
+          'stanford_page::field_s_content_status' => 'stanford_page::field_s_content_status',
         ),
       ),
-      'postpone_processing' => 0,
     ),
     'action::views_bulk_operations_argument_selector_action' => array(
       'selected' => 0,
@@ -217,66 +225,59 @@ function stanford_page_views_default_views() {
     ),
     'action::node_promote_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_publish_action' => array(
       'selected' => 1,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Publish',
-      'postpone_processing' => 0,
-    ),
-    'action::system_goto_action' => array(
-      'selected' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_unpromote_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_save_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::system_send_email_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_unpublish_action' => array(
       'selected' => 1,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Unpublish',
-      'postpone_processing' => 0,
     ),
     'action::node_unpublish_by_keyword_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::pathauto_node_update_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
   );
   /* Field: Field: Image */
@@ -305,6 +306,11 @@ function stanford_page_views_default_views() {
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['not'] = 0;
+  /* Field: Content: Content Status */
+  $handler->display->display_options['fields']['field_s_content_status']['id'] = 'field_s_content_status';
+  $handler->display->display_options['fields']['field_s_content_status']['table'] = 'field_data_field_s_content_status';
+  $handler->display->display_options['fields']['field_s_content_status']['field'] = 'field_s_content_status';
+  $handler->display->display_options['fields']['field_s_content_status']['delta_limit'] = 'all';
   /* Field: Content: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
@@ -381,6 +387,26 @@ function stanford_page_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
   $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+  /* Filter criterion: Content: Content Status (field_s_content_status) */
+  $handler->display->display_options['filters']['field_s_content_status_value']['id'] = 'field_s_content_status_value';
+  $handler->display->display_options['filters']['field_s_content_status_value']['table'] = 'field_data_field_s_content_status';
+  $handler->display->display_options['filters']['field_s_content_status_value']['field'] = 'field_s_content_status_value';
+  $handler->display->display_options['filters']['field_s_content_status_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_s_content_status_value']['expose']['operator_id'] = 'field_s_content_status_value_op';
+  $handler->display->display_options['filters']['field_s_content_status_value']['expose']['label'] = 'Content Status';
+  $handler->display->display_options['filters']['field_s_content_status_value']['expose']['operator'] = 'field_s_content_status_value_op';
+  $handler->display->display_options['filters']['field_s_content_status_value']['expose']['identifier'] = 'field_s_content_status_value';
+  $handler->display->display_options['filters']['field_s_content_status_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    11 => 0,
+    9 => 0,
+    7 => 0,
+    5 => 0,
+    17 => 0,
+    13 => 0,
+    15 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -391,6 +417,43 @@ function stanford_page_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '';
   $handler->display->display_options['menu']['name'] = 'menu-manage-content-by-type';
   $handler->display->display_options['menu']['context'] = 0;
+  $translatables['stanford_page_manage'] = array(
+    t('Master'),
+    t('Manage Stanford Page'),
+    t('more'),
+    t('Filter'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('field collection item from field_s_image_info'),
+    t('author'),
+    t('Row'),
+    t('Content'),
+    t('- Choose an operation -'),
+    t('Delete'),
+    t('Modify'),
+    t('Publish'),
+    t('Unpublish'),
+    t('Image'),
+    t('Title'),
+    t('Published'),
+    t('Content Status'),
+    t('Updated date'),
+    t('Author'),
+    t('Node ID'),
+    t('Actions'),
+    t('Link'),
+    t('Delete link'),
+    t('Page'),
+  );
   $export['stanford_page_manage'] = $view;
 
   return $export;

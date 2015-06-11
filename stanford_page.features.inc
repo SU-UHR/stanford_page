@@ -29,7 +29,7 @@ function stanford_page_views_api($module = NULL, $api = NULL) {
 function stanford_page_node_info() {
   $items = array(
     'stanford_page' => array(
-      'name' => t('Stanford Page'),
+      'name' => t('Page'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
